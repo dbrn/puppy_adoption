@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>Add a pup</title>
+{% endblock %}
+{% block content %}
+<div class="jumbotron shadow rounded">
+    <h1>Add a puppy</h1>
+    <hr>
+    <p>Fill the form here below to add a puppy</p>
+    <form class="form-group" method="POST">
+        {{form.hidden_tag()}}
+        {{form.pup_name.label}}{{form.pup_name(class="form-control shadow-sm", placeholder="Pup's name", style="width: 50%")}}
+        <br>
+        {{form.submit(class="btn btn-dark shadow-sm")}}
+    </form>
+</div>
+{% endblock %}

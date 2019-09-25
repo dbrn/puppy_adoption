@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>List puppies</title>
+{% endblock %}
+{% block content %}
+<div class="jumbotron shadow rounded">
+    <h1>List of adoptable puppies</h1>
+    <hr>
+    <p>Here's a list of the puppies available for adoption:</p>
+    <ul>
+        {% for pup in puppies %}
+            <li>{{pup}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

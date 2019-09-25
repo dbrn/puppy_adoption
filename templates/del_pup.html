@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>Delete a pup</title>
+{% endblock %}
+{% block content %}
+<div class="jumbotron shadow rounded">
+    <h1>Delete a puppy</h1>
+    <hr>
+    <p>Fill the form down below to delete a puppy</p>
+    <form class="form-group" method="POST">
+        {{form.hidden_tag()}}
+        {{form.pup_id.label}}{{form.pup_id(class="form-control shadow-sm", placeholder="Pup's ID", style="width: 50%")}}
+        <br>
+        {{form.submit(class="btn btn-dark shadow-sm")}}
+    </form>
+</div>
+{% endblock %}
